@@ -1,4 +1,5 @@
 from datetime import datetime
+from django.contrib.auth.models import User
 
 from rest_framework import serializers
 
@@ -85,6 +86,3 @@ class UserCreateSerializer(serializers.ModelSerializer):
         new_user = User(username=username)
         new_user.save()
         return validated_data
-
-
-
